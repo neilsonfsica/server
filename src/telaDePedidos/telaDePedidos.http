@@ -1,0 +1,24 @@
+@port = 3000
+@folder = pedidos
+@rota = geral
+
+###
+POST http://localhost:{{port}}/{{folder}}/{{rota}}
+Content-Type: application/json
+
+{
+    "call": "getDespesa"
+}
+###
+POST http://localhost:{{port}}/{{folder}}/{{rota}}
+Content-Type: application/json
+
+{
+    "call": "insertMovimentacao",
+    "param": {
+        "valor": 100,
+        "descricao": "Compra de material de escritório",
+        "categoria": "Escritório",
+        "tipo": "Despesa"
+    }
+}
