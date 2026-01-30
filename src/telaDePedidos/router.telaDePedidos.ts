@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from 'express';
-import Ctr from './ctrl.telaDePedidos';
-import per from '../../per.controllers';
+import { Request, Response, NextFunction } from "express";
+import Ctr from "./ctrl.telaDePedidos";
+import per from "../../per.controllers";
 
 class RouterPedidos {
   private ctr: Ctr;
@@ -16,14 +16,17 @@ class RouterPedidos {
   async getReceita() {
     return this.ctr.getReceita();
   }
+  async getMovimentacao() {
+    return this.ctr.getMovimentacao();
+  }
 
   async insertMovimentacao(req: Request) {
     const { param } = req.body;
-    
+
     if (!param) {
       throw new Error('Parâmetro "param" não fornecido');
     }
-    
+
     return this.ctr.insertMovimentacao(param);
   }
 }

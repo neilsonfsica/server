@@ -7,7 +7,7 @@ POST http://localhost:{{port}}/{{folder}}/{{rota}}
 Content-Type: application/json
 
 {
-    "call": "getDespesa"
+    "call": "getMovimentacao"
 }
 ###
 POST http://localhost:{{port}}/{{folder}}/{{rota}}

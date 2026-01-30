@@ -1,5 +1,5 @@
-import { iMovimentacao } from './interface';
-import Sql from './sql.telaDePedidos';
+import { iMovimentacao } from "./interface";
+import Sql from "./sql.telaDePedidos";
 
 export default class Ctr {
   private sql: Sql;
@@ -13,6 +13,9 @@ export default class Ctr {
   }
   async getReceita() {
     return this.sql.getReceita();
+  }
+  async getMovimentacao() {
+    return this.sql.getMovimentacao();
   }
 
   async insertMovimentacao(param: iMovimentacao) {
